@@ -1,0 +1,42 @@
+/* FooterPrompt Styles */
+.footer-prompt {
+  position: absolute;
+  width: 90%;
+  max-width: 458px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1100px;
+
+  font-family: 'Terminal Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  color: #2D080A;
+  margin: 0;
+}
+
+.footer-prompt a {
+  color: #7C3626;
+  text-decoration: underline;
+}
+
+.footer-prompt a:hover {
+  color: #034C3C;
+}
+
+@media (max-width: 768px) {
+  .footer-prompt {
+    top: 1050px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-prompt {
+    top: 1000px;
+    font-size: 18px;
+  }
+}
