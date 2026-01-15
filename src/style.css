@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Redaction 35 - Normal */
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/redaction-35/redaction-35-latin-400-normal.woff2') format('woff2'),
+    url('/fonts/redaction-35/redaction-35-latin-400-normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Redaction 35 - Italic */
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/redaction-35/redaction-35-latin-400-italic.woff2') format('woff2'),
+    url('/fonts/redaction-35/redaction-35-latin-400-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Redaction 35 - Bold */
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/redaction-35/redaction-35-latin-700-normal.woff2') format('woff2'),
+    url('/fonts/redaction-35/redaction-35-latin-700-normal.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Redaction 50 - Normal */
+@font-face {
+  font-family: 'Redaction 50';
+  src: url('/fonts/redaction-50/redaction-50-latin-400-normal.woff2') format('woff2'),
+    url('/fonts/redaction-50/redaction-50-latin-400-normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Redaction 50 - Italic */
+@font-face {
+  font-family: 'Redaction 50';
+  src: url('/fonts/redaction-50/redaction-50-latin-400-italic.woff2') format('woff2'),
+    url('/fonts/redaction-50/redaction-50-latin-400-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Terminal Grotesque */
+@font-face {
+  font-family: 'Terminal Grotesque';
+  src: url('/fonts/terminal-grotesque/terminal-grotesque-webfont.woff2') format('woff2'),
+    url('/fonts/terminal-grotesque/terminal-grotesque-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* KTF Jermilov */
+@font-face {
+  font-family: 'KTF Jermilov';
+  src: url('/fonts/ktf-jermilov/KTFJermilovTrial-Solid.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-redaction text-black bg-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .hero-caption {
+    font-family: 'Redaction 50', serif;
+    font-style: italic;
+  }
+
+  .text-shadow-subtle {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Progress bar animation */
+.progress-fill {
+  transition: width 0.1s linear;
+}
+
+/* Video hover effect */
+.video-hover {
+  @apply grayscale-[50%] transition-all duration-300;
+}
+
+.video-hover:hover {
+  @apply grayscale-0 scale-105;
+}
+
+/* Random color links - will be applied via JS */
+.random-color-link {
+  @apply font-plex text-xl no-underline transition-all duration-300;
+}
+
+.random-color-link:hover {
+  @apply underline opacity-80;
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "duration": 10000,
+        "caption": "i make games and develop systems for them",
+        "mainVideo": "/videos/wip-arborbar.mp4",
+        "backgroundVideos": [
+            "/videos/wip-foodsubsystem.mp4",
+            "/videos/wip-smartphone.mp4",
+            "/videos/wip-pan-cooking.mp4"
+        ]
+    },
+    {
+        "duration": 10000,
+        "caption": "i worked with Unity, Godot, Unreal and even Nintendo64 projects!",
+        "mainVideo": "/videos/wip-honey-heist.mp4",
+        "backgroundVideos": [
+            "/videos/wip-mechjam.mp4",
+            "/videos/wip-blackcatjam.mp4",
+            "/videos/wip-mission-impossible.mp4"
+        ]
+    },
+    {
+        "duration": 10000,
+        "caption": "i worked with small indie groups and large AAA studios",
+        "mainVideo": "/videos/wip-slasher2.mp4",
+        "backgroundVideos": [
+            "/videos/wip-slasher4.mp4",
+            "/videos/wip-foodtruck.mp4",
+            "/videos/wip-slasher5.mp4"
+        ]
+    }
+]

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andy Solovyov | Game Developer</title>
+  <meta name="description"
+    content="Portfolio of Andy Solovyov - Game developer creating video games and developing mechanics for indie groups and AAA studios." />
+
+  <!-- Google Fonts: IBM Plex Serif & Terminal Grotesque fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white text-black min-h-screen">
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="font-terminal text-base">andy solovyov</span>
+      <div class="flex gap-6">
+        <a href="#" class="font-terminal font-bold text-base hover:opacity-70 transition-opacity">cv</a>
+        <a href="https://github.com" target="_blank"
+          class="font-terminal font-bold text-base hover:opacity-70 transition-opacity">github</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="relative min-h-screen w-full overflow-hidden pt-20">
+
+    <!-- Background Videos Container -->
+    <div id="background-videos" class="absolute inset-0 z-0 pointer-events-none overflow-hidden"></div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
+
+      <!-- SVG Logo -->
+      <div class="mb-8 md:mb-12">
+        <img src="/logo.svg" alt="YES THIS IS ANDY" class="w-24 md:w-32 h-auto" />
+      </div>
+
+      <!-- Main Video Wrapper -->
+      <div id="main-video-wrapper"
+        class="relative w-full max-w-xs sm:max-w-md md:max-w-2xl aspect-video bg-black overflow-hidden cursor-pointer shadow-2xl rounded-sm">
+
+        <!-- Progress Bars -->
+        <div id="progress-container" class="absolute top-0 inset-x-0 z-20 flex gap-1 p-2"></div>
+
+        <!-- Video -->
+        <video id="main-video" class="w-full h-full object-cover" autoplay muted playsinline loop></video>
+      </div>
+
+      <!-- Caption -->
+      <div id="caption"
+        class="mt-6 md:mt-10 text-center hero-caption text-2xl md:text-4xl text-black tracking-wide max-w-xl px-4 leading-relaxed">
+        Loading...
+      </div>
+
+      <!-- cv / github links (mobile position) -->
+      <div class="mt-8 flex gap-4 md:hidden">
+        <a href="#" class="font-terminal text-sm opacity-70">cv</a>
+        <a href="https://github.com" target="_blank" class="font-terminal text-sm opacity-70">github</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SELECTED GAMES SECTION ========== -->
+  <section id="games" class="py-20 md:py-32 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Section Heading -->
+      <h2 class="font-jermilov text-2xl md:text-4xl mb-12 md:mb-16 tracking-wide uppercase">
+        THESE ARE THE GAMES I WAS PART OF
+      </h2>
+
+      <!-- Project Links -->
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-x-8 md:gap-y-4">
+        <a href="#" class="random-color-link">call of duty Modern Warfare III (2023)</a>
+        <a href="#" class="random-color-link">the arbor bar</a>
+        <a href="#" class="random-color-link">the butcher's harvest</a>
+        <a href="#" class="random-color-link">jerry gets fired</a>
+        <a href="#" class="random-color-link">honey heist</a>
+        <a href="#" class="random-color-link">kaiju insurance LLC</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer class="bg-[#D45A5A] text-white py-16 md:py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Footer Logo -->
+      <div class="flex justify-center mb-12 md:mb-16">
+        <img src="/logo.svg" alt="YES THIS IS ANDY" class="w-20 md:w-28 h-auto invert" />
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+
+        <!-- Left Column: Contact -->
+        <div>
+          <h3 class="font-jermilov text-xl md:text-2xl mb-6 uppercase opacity-70 tracking-wide">
+            LET'S STAY IN TOUCH
+          </h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="mailto:andysolovyov@gmail.com"
+                class="font-terminal text-base hover:opacity-80 transition-opacity">
+                andysolovyov@gmail.com
+              </a>
+            </li>
+            <li><a href="#" class="font-terminal text-base hover:opacity-80 transition-opacity">cv</a></li>
+            <li><a href="https://linkedin.com" target="_blank"
+                class="font-terminal text-base hover:opacity-80 transition-opacity">linkedin</a></li>
+            <li><a href="https://github.com" target="_blank"
+                class="font-terminal text-base hover:opacity-80 transition-opacity">github</a></li>
+            <li><a href="https://artstation.com" target="_blank"
+                class="font-terminal text-base hover:opacity-80 transition-opacity">artstation</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Full Project Ref List -->
+        <div>
+          <h3 class="font-jermilov text-xl md:text-2xl mb-6 uppercase opacity-70 tracking-wide">
+            FULL PROJECT REF LIST
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <!-- Games -->
+            <div>
+              <h4 class="font-jermilov text-base mb-3 uppercase opacity-90">GAMES</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">call of duty Modern
+                    Warfare III (2023)</a></li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">the arbor bar</a></li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">the butcher's
+                    harvest</a></li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">jerry gets fired</a>
+                </li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">honey heist</a></li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">kaiju insurance
+                    LLC</a></li>
+              </ul>
+            </div>
+
+            <!-- Assets -->
+            <div>
+              <h4 class="font-jermilov text-base mb-3 uppercase opacity-90">ASSETS</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">smartphone.system</a>
+                </li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">unreal_interaction
+                    system</a></li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">unreal_food_system</a>
+                </li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">minimap.system</a>
+                </li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">rooftop_pack</a></li>
+                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">christmas_3d_pack</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-16 pt-8 border-t border-white/20 text-center">
+        <p class="font-terminal text-sm opacity-70">andy solovyov, 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
