@@ -67,23 +67,70 @@
     </div>
   </section>
 
-  <!-- ========== SELECTED GAMES SECTION ========== -->
-  <section id="games" class="py-20 md:py-32 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="bg-white px-6 pb-24">
+    <!-- MOBILE GRID (10 rows, 2 columns) -->
+    <div class="grid md:hidden grid-cols-2 grid-rows-[repeat(10,80px)] gap-x-4">
+      <!-- Title: bottom of row 1 -->
+      <div class="col-start-1 col-end-3 row-start-1 row-end-2 flex items-end pb-2">
+        <h2 class="font-jermilov text-[24px] text-black">game i worked on</h2>
+      </div>
 
-      <!-- Section Heading -->
-      <h2 class="font-jermilov text-2xl md:text-4xl mb-12 md:mb-16 tracking-wide uppercase">
-        THESE ARE THE GAMES I WAS PART OF
-      </h2>
+      <!-- List: starts top of row 2, col 1 -->
+      <div id="mobile-projects-list" class="col-start-1 col-end-2 row-start-2 row-end-11 flex flex-col gap-[12px]">
+        <div class="font-terminal text-[16px] text-[#034C3C]">call of duty Modern Warfare III (2023)</div>
+        <div class="font-terminal text-[16px] text-[#034C3C]">the arbor bar</div>
+        <div class="font-terminal text-[16px] text-[#034C3C]">the butcher's harvest</div>
+        <div class="font-terminal text-[16px] text-[#034C3C]">jerry gets fired</div>
+        <div class="font-terminal text-[16px] text-[#034C3C]">honey heist</div>
+        <div class="font-terminal text-[16px] text-[#034C3C]">kaiju insurance LLC</div>
+      </div>
 
-      <!-- Project Links -->
-      <div class="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-x-8 md:gap-y-4">
-        <a href="#" class="random-color-link">call of duty Modern Warfare III (2023)</a>
-        <a href="#" class="random-color-link">the arbor bar</a>
-        <a href="#" class="random-color-link">the butcher's harvest</a>
-        <a href="#" class="random-color-link">jerry gets fired</a>
-        <a href="#" class="random-color-link">honey heist</a>
-        <a href="#" class="random-color-link">kaiju insurance LLC</a>
+      <!-- Screenshot Section: Col 2, middle of space before row 5 -->
+      <div id="mobile-screenshot-stack" class="col-start-2 col-end-3 row-start-2 row-end-5 relative overflow-visible">
+        <!-- JS will inject images here -->
+      </div>
+
+      <!-- Recent Position: Col 2, starting row 6 -->
+      <div class="col-start-2 col-end-3 row-start-6 row-end-10 pt-2">
+        <h3 class="font-jermilov text-[24px] text-black leading-tight">most recent position</h3>
+        <div class="mt-1">
+          <p class="font-terminal text-[16px] text-[#034C3C]">software engineer @</p>
+          <p class="font-terminal text-[16px] text-[#034C3C]">fatal fox studios</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP GRID (7x5) -->
+    <div class="hidden md:grid grid-cols-7 grid-rows-[repeat(5,120px)] gap-6">
+      <!-- Title: bottom of cell in col 2, row 1 -->
+      <div class="col-start-2 col-end-3 row-start-1 row-end-2 flex items-end pb-2">
+        <h2 class="font-jermilov text-[24px] text-black">games i worked on</h2>
+      </div>
+
+      <!-- List: starts beneath title in row 2, col 2 -->
+      <div id="desktop-projects-list" class="col-start-2 col-end-3 row-start-2 row-end-6 flex flex-col gap-[6px]">
+        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">call of duty Modern Warfare III (2023)
+        </div>
+        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">the arbor bar</div>
+        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">the butcher's harvest</div>
+        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">jerry gets fired</div>
+        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">honey heist</div>
+        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">kaiju insurance LLC</div>
+      </div>
+
+      <!-- Screenshot Section: Between col 3, row 1 and col 5, row 3 -->
+      <div id="desktop-screenshot-stack" class="col-start-3 col-end-6 row-start-1 row-end-4 relative overflow-visible">
+        <!-- JS will inject images here -->
+      </div>
+
+      <!-- Recent Position: starts col 6, row 4 -->
+      <div class="col-start-6 col-end-8 row-start-4 row-end-6 pt-2">
+        <h3 class="font-jermilov text-[24px] text-black leading-tight">most recent position</h3>
+        <div class="mt-1">
+          <p class="font-terminal text-[16px] text-[#034C3C]">software engineer @</p>
+          <p class="font-terminal text-[16px] text-[#034C3C]">fatal fox studios</p>
+        </div>
       </div>
     </div>
   </section>

@@ -61,6 +61,9 @@ function init() {
     applyRandomColors();
 
     startSection(0);
+
+    // Initialize the new project section screenshots
+    startScreenshotStacking();
 }
 
 function applyRandomColors() {
@@ -272,6 +275,75 @@ function isOverlapping(rect1, rect2, tolerance) {
     const area2 = rect2.width * rect2.height;
 
     return (overlapArea / area1 > tolerance) || (overlapArea / area2 > tolerance);
+}
+
+// Initialize when DOM is ready - moved to the bottom
+
+// --- PROJECT SCREENSHOT STACKING LOGIC ---
+
+const screenshotData = {
+    mw3: ['Store_GamesPDP_Hero_Secondary02.png', 'Store_GamesPDP_Hero_Secondary04.png'],
+    tab: ['IdEmBJ.png', 'lK7DH+.png', 'Ud1pKU.png', 'vjfI03.png', 'wDZRrS.png'],
+    tbh: ['16fbl0.png', 'iVuhf_.png', 'JzCNir.png', 'shZu4G.png'],
+    hh: ['1.png', '6vWN08.png', 'Q5Ea_J.png', 'XQk1qH.png'],
+    jgf: ['9xiuCB.png', 'Vdzv5X.png', 'hkWdpM.png', 'mljpAr.png'],
+    kil: ['40l_wB.png', 'aZU46n.png'],
+    tws: ['7NA9+9.png', 'LPzKA0.png', 'tGCwEt.png']
+};
+
+let lastScreenshotProject = '';
+
+function startScreenshotStacking() {
+    const mobileContainer = document.getElementById('mobile-screenshot-stack');
+    const desktopContainer = document.getElementById('desktop-screenshot-stack');
+
+    if (!mobileContainer && !desktopContainer) return;
+
+    function spawn() {
+        // Pick a random project that isn't the same as the last one
+        const projects = Object.keys(screenshotData);
+        let project;
+        do {
+            project = projects[Math.floor(Math.random() * projects.length)];
+        } while (project === lastScreenshotProject && projects.length > 1);
+
+        lastScreenshotProject = project;
+
+        const screenshots = screenshotData[project];
+        const screenshot = screenshots[Math.floor(Math.random() * screenshots.length)];
+        const src = `/media/gamescreenshots/${project}/${screenshot}`;
+
+        [mobileContainer, desktopContainer].forEach(container => {
+            if (!container) return;
+
+            const img = document.createElement('img');
+            img.src = src;
+            // No effects, just appear
+            img.className = 'absolute max-w-[80%] max-h-[80%] object-contain';
+
+            // Random offset from center
+            const offsetX = (Math.random() - 0.5) * 60; // +/- 30px
+            const offsetY = (Math.random() - 0.5) * 60; // +/- 30px
+
+            img.style.left = `calc(50% + ${offsetX}px)`;
+            img.style.top = `calc(50% + ${offsetY}px)`;
+            img.style.transform = 'translate(-50%, -50%)';
+            img.style.zIndex = container.children.length;
+
+            container.appendChild(img);
+
+            // Limit to 5 screenshots, remove the bottom one
+            if (container.children.length > 5) {
+                container.firstElementChild.remove();
+            }
+        });
+
+        // Random interval between 1.5s and 3.5s
+        const nextDelay = Math.random() * 2000 + 1500;
+        setTimeout(spawn, nextDelay);
+    }
+
+    spawn();
 }
 
 // Initialize when DOM is ready
