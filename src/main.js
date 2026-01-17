@@ -1,6 +1,9 @@
 import './style.css';
 import data from './data.json';
 
+// Get the base URL for asset paths (important for GitHub Pages)
+const BASE_URL = import.meta.env.BASE_URL;
+
 // DOM Elements
 const mainVideo = document.getElementById('main-video');
 const mainVideoWrapper = document.getElementById('main-video-wrapper');
@@ -96,7 +99,7 @@ function startSection(index) {
 
     // Update main video
     if (mainVideo) {
-        mainVideo.src = item.mainVideo;
+        mainVideo.src = BASE_URL + item.mainVideo.replace(/^\//, '');
         const playPromise = mainVideo.play();
         if (playPromise !== undefined) {
             playPromise.catch(error => {
@@ -243,7 +246,7 @@ function spawnVideo() {
     }
 
     const v = document.createElement('video');
-    v.src = src;
+    v.src = BASE_URL + src.replace(/^\//, '');
     v.muted = true;
     v.playsInline = true;
     v.autoplay = true;
@@ -339,7 +342,7 @@ function startScreenshotStacking() {
             if (!container) return;
 
             const img = document.createElement('img');
-            img.src = src;
+            img.src = BASE_URL + src.replace(/^\//, '');
             // No effects, just appear
             img.className = 'absolute max-w-[80%] max-h-[80%] object-contain';
 
