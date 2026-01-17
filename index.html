@@ -16,20 +16,10 @@
 
 <body class="bg-white text-black min-h-screen">
 
-  <!-- ========== HEADER / NAVIGATION ========== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <span class="font-terminal text-base">andy solovyov</span>
-      <div class="flex gap-6">
-        <a href="#" class="font-terminal font-bold text-base hover:opacity-70 transition-opacity">cv</a>
-        <a href="https://github.com" target="_blank"
-          class="font-terminal font-bold text-base hover:opacity-70 transition-opacity">github</a>
-      </div>
-    </nav>
-  </header>
+
 
   <!-- ========== HERO SECTION ========== -->
-  <section id="hero" class="relative min-h-screen w-full overflow-hidden pt-20">
+  <section id="hero" class="relative min-h-screen w-full overflow-hidden">
 
     <!-- Background Videos Container -->
     <div id="background-videos" class="absolute inset-0 z-0 pointer-events-none overflow-hidden"></div>
@@ -37,14 +27,23 @@
     <!-- Main Content -->
     <div class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
 
-      <!-- SVG Logo -->
-      <div class="mb-8 md:mb-12">
-        <img src="/logo.svg" alt="YES THIS IS ANDY" class="w-24 md:w-32 h-auto" />
+      <div class="mb-6">
+        <img src="/logo.svg" alt="YES THIS IS ANDY" class="w-[194px] h-[210px]" />
+      </div>
+
+      <!-- Social Links -->
+      <div class="mb-8 md:mb-12 flex gap-6">
+        <a href="https://linkedin.com/in/andy-solovyov/" target="_blank"
+          class="font-terminal text-base text-[#064B70]/64 hover:opacity-100 transition-opacity uppercase">linkedin</a>
+        <a href="https://github.com/legibleguy" target="_blank"
+          class="font-terminal text-base text-[#064B70]/64 hover:opacity-100 transition-opacity uppercase">github</a>
+        <a href="https://drive.google.com/file/d/1f4LNA7LroPuW__dWhTp5J0ALqa2EAJdh/view?usp=sharing" target="_blank"
+          class="font-terminal text-base text-[#7E1919]/64 hover:opacity-100 transition-opacity uppercase">cv</a>
       </div>
 
       <!-- Main Video Wrapper -->
       <div id="main-video-wrapper"
-        class="relative w-full max-w-xs sm:max-w-md md:max-w-2xl aspect-video bg-black overflow-hidden cursor-pointer shadow-2xl rounded-sm">
+        class="relative w-full max-w-xs sm:max-w-md md:max-w-2xl aspect-video bg-black overflow-hidden cursor-pointer">
 
         <!-- Progress Bars -->
         <div id="progress-container" class="absolute top-0 inset-x-0 z-20 flex gap-1 p-2"></div>
@@ -55,35 +54,40 @@
 
       <!-- Caption -->
       <div id="caption"
-        class="mt-6 md:mt-10 text-center hero-caption text-2xl md:text-4xl text-black tracking-wide max-w-xl px-4 leading-relaxed">
+        class="mt-6 md:mt-10 hero-caption text-2xl md:text-4xl text-black tracking-wide max-w-xl px-4 leading-relaxed">
         Loading...
       </div>
 
-      <!-- cv / github links (mobile position) -->
-      <div class="mt-8 flex gap-4 md:hidden">
-        <a href="#" class="font-terminal text-sm opacity-70">cv</a>
-        <a href="https://github.com" target="_blank" class="font-terminal text-sm opacity-70">github</a>
-      </div>
+
     </div>
   </section>
 
   <!-- ========== PROJECTS SECTION ========== -->
-  <section id="projects" class="bg-white px-6 pb-24">
+  <section id="projects" class="bg-white px-6 pt-48 pb-24">
     <!-- MOBILE GRID (10 rows, 2 columns) -->
     <div class="grid md:hidden grid-cols-2 grid-rows-[repeat(10,80px)] gap-x-4">
       <!-- Title: bottom of row 1 -->
       <div class="col-start-1 col-end-3 row-start-1 row-end-2 flex items-end pb-2">
-        <h2 class="font-jermilov text-[24px] text-black">game i worked on</h2>
+        <h2 class="font-jermilov text-[24px] text-black">games i worked on</h2>
       </div>
 
       <!-- List: starts top of row 2, col 1 -->
       <div id="mobile-projects-list" class="col-start-1 col-end-2 row-start-2 row-end-11 flex flex-col gap-[12px]">
-        <div class="font-terminal text-[16px] text-[#034C3C]">call of duty Modern Warfare III (2023)</div>
-        <div class="font-terminal text-[16px] text-[#034C3C]">the arbor bar</div>
-        <div class="font-terminal text-[16px] text-[#034C3C]">the butcher's harvest</div>
-        <div class="font-terminal text-[16px] text-[#034C3C]">jerry gets fired</div>
-        <div class="font-terminal text-[16px] text-[#034C3C]">honey heist</div>
-        <div class="font-terminal text-[16px] text-[#034C3C]">kaiju insurance LLC</div>
+        <a href="https://www.mobygames.com/game/211657/call-of-duty-modern-warfare-iii/credits/playstation-4/"
+          target="_blank" class="font-terminal text-[16px] text-[#034C3C]">call of duty
+          Modern Warfare III (2023)</a>
+        <a href="https://gregariouscoder.itch.io/the-arbor-bar" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C]">the arbor bar</a>
+        <a href="https://gregariouscoder.itch.io/the-butchers-harvest" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C]">the butcher's harvest</a>
+        <a href="https://haavards.itch.io/jerry-gets-fired" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C]">jerry gets fired</a>
+        <a href="https://marx117.itch.io/whiskersweeper" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C]">whisker sweeper</a>
+        <a href="https://cgcooke.itch.io/honey-heist" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C]">honey heist</a>
+        <a href="https://sondergaming.itch.io/kill-corporation" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C]">kaiju insurance LLC</a>
       </div>
 
       <!-- Screenshot Section: Col 2, middle of space before row 5 -->
@@ -110,17 +114,31 @@
 
       <!-- List: starts beneath title in row 2, col 2 -->
       <div id="desktop-projects-list" class="col-start-2 col-end-3 row-start-2 row-end-6 flex flex-col gap-[6px]">
-        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">call of duty Modern Warfare III (2023)
-        </div>
-        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">the arbor bar</div>
-        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">the butcher's harvest</div>
-        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">jerry gets fired</div>
-        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">honey heist</div>
-        <div class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">kaiju insurance LLC</div>
+        <a href="https://www.mobygames.com/game/211657/call-of-duty-modern-warfare-iii/credits/playstation-4/"
+          target="_blank" class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">call of duty
+          Modern Warfare III (2023)</a>
+        <a href="https://gregariouscoder.itch.io/the-arbor-bar" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">the arbor
+          bar</a>
+        <a href="https://gregariouscoder.itch.io/the-butchers-harvest" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">the
+          butcher's harvest</a>
+        <a href="https://haavards.itch.io/jerry-gets-fired" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">jerry gets
+          fired</a>
+        <a href="https://marx117.itch.io/whiskersweeper" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">whisker
+          sweeper</a>
+        <a href="https://cgcooke.itch.io/honey-heist" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">honey
+          heist</a>
+        <a href="https://sondergaming.itch.io/kill-corporation" target="_blank"
+          class="font-terminal text-[16px] text-[#034C3C] whitespace-nowrap">kaiju
+          insurance LLC</a>
       </div>
 
-      <!-- Screenshot Section: Between col 3, row 1 and col 5, row 3 -->
-      <div id="desktop-screenshot-stack" class="col-start-3 col-end-6 row-start-1 row-end-4 relative overflow-visible">
+      <!-- Screenshot Section: Between col 4, row 1 and col 5, row 3 -->
+      <div id="desktop-screenshot-stack" class="col-start-4 col-end-6 row-start-1 row-end-4 relative overflow-visible">
         <!-- JS will inject images here -->
       </div>
 
@@ -141,7 +159,7 @@
 
       <!-- Footer Logo -->
       <div class="flex justify-center mb-12 md:mb-16">
-        <img src="/logo.svg" alt="YES THIS IS ANDY" class="w-20 md:w-28 h-auto invert" />
+        <img src="/logo_base.svg" alt="YES THIS IS ANDY" class="w-20 md:w-28 h-auto invert" />
       </div>
 
       <!-- Two Column Layout -->
@@ -159,13 +177,12 @@
                 andysolovyov@gmail.com
               </a>
             </li>
-            <li><a href="#" class="font-terminal text-base hover:opacity-80 transition-opacity">cv</a></li>
-            <li><a href="https://linkedin.com" target="_blank"
+            <li><a href="https://drive.google.com/file/d/1f4LNA7LroPuW__dWhTp5J0ALqa2EAJdh/view?usp=sharing"
+                target="_blank" class="font-terminal text-base hover:opacity-80 transition-opacity">cv</a></li>
+            <li><a href="https://linkedin.com/in/andy-solovyov/" target="_blank"
                 class="font-terminal text-base hover:opacity-80 transition-opacity">linkedin</a></li>
-            <li><a href="https://github.com" target="_blank"
+            <li><a href="https://github.com/legibleguy" target="_blank"
                 class="font-terminal text-base hover:opacity-80 transition-opacity">github</a></li>
-            <li><a href="https://artstation.com" target="_blank"
-                class="font-terminal text-base hover:opacity-80 transition-opacity">artstation</a></li>
           </ul>
         </div>
 
@@ -180,15 +197,25 @@
             <div>
               <h4 class="font-jermilov text-base mb-3 uppercase opacity-90">GAMES</h4>
               <ul class="space-y-2">
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">call of duty Modern
+                <li><a
+                    href="https://www.mobygames.com/game/211657/call-of-duty-modern-warfare-iii/credits/playstation-4/"
+                    target="_blank" class="font-terminal text-sm hover:opacity-80 transition-opacity">call of duty
+                    Modern
                     Warfare III (2023)</a></li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">the arbor bar</a></li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">the butcher's
+                <li><a href="https://gregariouscoder.itch.io/the-arbor-bar" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">the arbor bar</a></li>
+                <li><a href="https://gregariouscoder.itch.io/the-butchers-harvest" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">the butcher's
                     harvest</a></li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">jerry gets fired</a>
+                <li><a href="https://haavards.itch.io/jerry-gets-fired" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">jerry gets fired</a>
                 </li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">honey heist</a></li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">kaiju insurance
+                <li><a href="https://marx117.itch.io/whiskersweeper" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">whisker sweeper</a></li>
+                <li><a href="https://cgcooke.itch.io/honey-heist" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">honey heist</a></li>
+                <li><a href="https://sondergaming.itch.io/kill-corporation" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">kaiju insurance
                     LLC</a></li>
               </ul>
             </div>
@@ -197,16 +224,19 @@
             <div>
               <h4 class="font-jermilov text-base mb-3 uppercase opacity-90">ASSETS</h4>
               <ul class="space-y-2">
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">smartphone.system</a>
+                <li><a href="https://github.com/legibleguy/ue4-smartphone" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">smartphone system</a>
                 </li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">unreal_interaction
-                    system</a></li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">unreal_food_system</a>
+                <li><a href="https://github.com/legibleguy/KimballFood" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">unreal food system</a>
                 </li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">minimap.system</a>
+                <li><a href="https://www.unrealengine.com/marketplace/en-US/product/automatic-minimap" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">minimap system</a>
                 </li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">rooftop_pack</a></li>
-                <li><a href="#" class="font-terminal text-sm hover:opacity-80 transition-opacity">christmas_3d_pack</a>
+                <li><a href="https://www.unrealengine.com/marketplace/en-US/product/rooftop-pack" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">rooftop pack</a></li>
+                <li><a href="https://www.artstation.com/artwork/e0RRnD" target="_blank"
+                    class="font-terminal text-sm hover:opacity-80 transition-opacity">christmas 3d pack</a>
                 </li>
               </ul>
             </div>

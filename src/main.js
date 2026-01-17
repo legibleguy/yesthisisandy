@@ -14,6 +14,7 @@ let progressInterval;
 let spawnTimeout;
 let startTime;
 const MAX_BG_VIDEOS = 6;
+let currentSectionVideoHistory = [];
 
 // Random colors for project links
 const projectColors = [
@@ -90,6 +91,7 @@ function startSection(index) {
     // Clear background videos for clean transition
     if (backgroundContainer) {
         backgroundContainer.innerHTML = '';
+        currentSectionVideoHistory = [];
     }
 
     // Update main video
@@ -174,7 +176,7 @@ function scheduleNextSpawn() {
     }, delay);
 }
 
-let lastVideos = [];
+// let lastVideos = []; // Removed in favor of currentSectionVideoHistory reset per section
 
 function spawnVideo() {
     const item = data[currentIndex];
@@ -187,15 +189,14 @@ function spawnVideo() {
     }
 
     // Pick a video that wasn't among the last used (if possible)
-    let availableVideos = item.backgroundVideos.filter(v => !lastVideos.includes(v));
+    let availableVideos = item.backgroundVideos.filter(v => !currentSectionVideoHistory.includes(v));
     if (availableVideos.length === 0) {
         availableVideos = item.backgroundVideos;
-        lastVideos = [];
+        currentSectionVideoHistory = [];
     }
 
     const src = availableVideos[Math.floor(Math.random() * availableVideos.length)];
-    lastVideos.push(src);
-    if (lastVideos.length > 3) lastVideos.shift();
+    currentSectionVideoHistory.push(src);
 
     // Determine size
     const minW = Math.min(window.innerWidth * 0.12, 180);
@@ -250,7 +251,7 @@ function spawnVideo() {
 
     v.style.width = `${width}px`;
     v.style.height = `${height}px`;
-    v.className = 'absolute object-cover grayscale-[50%] hover:grayscale-0 transition-all duration-300 rounded-sm';
+    v.className = 'absolute object-cover grayscale-[50%] hover:grayscale-0 transition-all duration-300';
     v.style.left = `${bestX}px`;
     v.style.top = `${bestY}px`;
 
@@ -299,6 +300,8 @@ function startScreenshotStacking() {
 
     if (!mobileContainer && !desktopContainer) return;
 
+    let currentScreenshots = [];
+
     function spawn() {
         // Pick a random project that isn't the same as the last one
         const projects = Object.keys(screenshotData);
@@ -310,8 +313,27 @@ function startScreenshotStacking() {
         lastScreenshotProject = project;
 
         const screenshots = screenshotData[project];
-        const screenshot = screenshots[Math.floor(Math.random() * screenshots.length)];
+
+        // Filter screenshots that are NOT in the current group of 5 on screen
+        let availableScreenshots = screenshots.filter(s => {
+            const src = `/media/gamescreenshots/${project}/${s}`;
+            return !currentScreenshots.includes(src);
+        });
+
+        // If all screenshots for this project are somehow already on screen,
+        // just pick a random one from the project (fallback)
+        if (availableScreenshots.length === 0) {
+            availableScreenshots = screenshots;
+        }
+
+        const screenshot = availableScreenshots[Math.floor(Math.random() * availableScreenshots.length)];
         const src = `/media/gamescreenshots/${project}/${screenshot}`;
+
+        // Add to history
+        currentScreenshots.push(src);
+        if (currentScreenshots.length > 5) {
+            currentScreenshots.shift();
+        }
 
         [mobileContainer, desktopContainer].forEach(container => {
             if (!container) return;
@@ -339,7 +361,7 @@ function startScreenshotStacking() {
         });
 
         // Random interval between 1.5s and 3.5s
-        const nextDelay = Math.random() * 2000 + 1500;
+        const nextDelay = Math.random() * 500 + 50;
         setTimeout(spawn, nextDelay);
     }
 
