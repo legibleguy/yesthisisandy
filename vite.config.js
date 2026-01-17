@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     // Set base to your repository name for GitHub Pages
     // Change this to '/' if deploying to a custom domain
-    base: '/yesthisisandy/',
+    base: '/',
 
     build: {
         // Output directory for built files
